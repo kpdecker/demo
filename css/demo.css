@@ -32,7 +32,7 @@ h1 {
   padding: 0;
   background-color: #131F27;
 
-  width: 960px;
+  width: 1024px;
 }
 
 .header {
@@ -66,4 +66,17 @@ h1 {
 .header > a,
 .footer > div > a {
   color: #6598B8;
+}
+
+td.content {
+    white-space: nowrap;
+}
+
+/* Operation Queue Demo */
+.action {
+    float: left;
+    padding-right: 20px;
+}
+hr {
+    clear: left;
 }

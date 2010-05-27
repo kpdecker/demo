@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+  Copyright (c) 2010 Kevin Decker (http://www.incaseofstairs.com/)
+  See LICENSE for license information
+-->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>operation-queue demo</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-15628919-3"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function() {
+        var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+        ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>operation-queue demo</h1>
+        </div>
+        <div class="content">
+            <h2>operation-queue</h2>
+            <div id="state"></div>
+
+            <h3>blocking states</h3>
+            <div class="action">
+                <pre class="brush: jscript; light: true;">(opQueue.getSuccessHandler())(counter++);</pre>
+                <button id="success">Success</button>
+            </div>
+            <div class="action">
+                <pre class="brush: jscript; light: true;">(opQueue.getFailureHandler())(counter++);</pre>
+                <button id="failure">Failure</button>
+            </div>
+            <div class="action">
+                <pre class="brush: jscript; light: true;">opQueue.reset();</pre>
+                <button id="reset">Reset</button>
+            </div>
+
+            <hr>
+            <h3>waiting states</h3>
+            <div class="action">
+                <pre class="brush: jscript;">
+    opQueue.queue(function(result) {
+        demoLog("Success " + result);
+    }</pre>
+                <button id="onSuccess">Queue onSuccess</button>
+            </div>
+            <div class="action">
+                <pre class="brush: jscript;">
+    opQueue.queue({
+        onFailure: function(result) {
+            demoLog("Failure " + result);
+        }
+    }</pre>
+                <button id="onFailure">Queue onFailure</button>
+            </div>
+            <div class="action">
+                <pre class="brush: jscript;">
+    opQueue.queue({
+        onSuccess: function(result) {
+            demoLog("Both Success: " + result);
+        }
+        onFailure: function(result) {
+            demoLog("Both Failure " + result);
+        }
+    }</pre>
+                <button id="onBoth">Queue onBoth</button>
+            </div>
+
+            <hr>
+            <h2>log</h2>
+            <ul id="logger"></ul>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <a href="http://www.incaseofstairs.com/">incaseofstairs</a>
+            </div>
+            <div class="right">
+                <a href="http://github.com/kpdecker/demo">demo @ github</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./operation-queue.js"></script>
+    <script type="text/javascript" src="./operation-queue-demo.js"></script>
+
+    <script type="text/javascript" src="http://static.incaseofstairs.com/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="http://static.incaseofstairs.com/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../syntaxhighlight.js"></script>
+</body>
+</html>

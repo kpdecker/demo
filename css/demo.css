@@ -1,0 +1,69 @@
+/*
+ * Copyright (c) 2010 Kevin Decker (http://www.incaseofstairs.com/)
+ * See LICENSE for license information
+ */
+
+body {
+  background-color: #83ADC8;
+  color: white;
+  font-size: 9pt;
+  font-family: trebuchet ms,arial,helvetica,sans-serif;
+  margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+  display: inline-block;
+
+  margin: 0;
+  padding: 5px 15px;
+
+  font-size: 15pt;
+  font-weight: normal;
+  letter-spacing: -2px;
+}
+
+.wrapper {
+  margin: 0px auto;
+  padding: 0;
+  background-color: #131F27;
+
+  width: 960px;
+}
+
+.header {
+  background-color: black;
+  margin: 20px 0 0;
+}
+
+.wrapper, .header {
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.content {
+  margin: 5px 15px 0px;
+  overflow: hidden;
+}
+
+.footer {
+  background-color: black;
+  padding: 10px 25px;
+  clear: both;
+  overflow: auto;
+}
+.footer > .left {
+  float: left;
+}
+.footer > .right {
+  float: right;
+}
+.header > a,
+.footer > div > a {
+  color: #6598B8;
+}

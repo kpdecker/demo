@@ -6,7 +6,7 @@
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(msg));
 
-        $("#logger").append(li);
+        $("#logger").prepend(li);
     }
 
     $("#success").click(function() {

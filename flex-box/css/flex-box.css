@@ -1,0 +1,46 @@
+/* Flex Box Styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+}
+.overlay-header {
+    /* These values are defaults per the specification. Including for demonstrational purposes */
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+}
+.overlay-content {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    overflow: auto;
+}
+
+/* General UI Styling */
+.frame {
+    position: relative;
+    width: 500px;
+    margin-left: 262px;
+    overflow: hidden;
+}
+.overlay {
+    background-image: url(../images/translucent-background.png);
+}
+.overlay-header {
+    background-color: green;
+}
+.content-image {
+    /* This is specific to the image in use to maintain the proper aspect ratio */
+    width: 100%;
+    height: auto;
+}

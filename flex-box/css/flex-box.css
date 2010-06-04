@@ -1,17 +1,22 @@
 /* Flex Box Styles */
 .overlay {
+    /* Position absolute and box models do not work under gecko */
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-
+}
+.overlay-box {
     display: -webkit-box;
     display: -moz-box;
     display: box;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
+
+    width: 100%;
+    height: 100%;
 }
 .overlay-header {
     /* These values are defaults per the specification. Including for demonstrational purposes */
@@ -24,6 +29,9 @@
     -moz-box-flex: 1;
     box-flex: 1;
     overflow: auto;
+
+    /* This is a hack to force gecko to implement the desired behavior */
+    min-height: 1px;
 }
 
 /* General UI Styling */

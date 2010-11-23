@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+  Copyright (c) 2010 Kevin Decker (http://www.incaseofstairs.com/)
+  See LICENSE for license information
+-->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>text-indexer demo</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+    <style type="text/css">
+        #testContent {
+            display: block;
+            margin: 15px auto;
+            width: 70%;
+        }
+        #previewContent {
+            margin: 15px auto;
+            width: 70%;
+        }
+        #previewContent > a {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-15628919-3"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function() {
+        var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+        ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>text-indexer demo</h1>
+        </div>
+        <div class="content">
+            <label for="testContent">Test Content:</label>
+            <textarea id="testContent" rows="20">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. http://demo.incaseofstairs.com/flex-box Donec eu sapien ac diam mollis blandit nec quis orci. Nulla malesuada sapien eget ipsum bibendum semper. Pellentesque ut nisi nec ipsum egestas rhoncus nec quis mi. Nullam nisi nisi, porta ac aliquam vel, volutpat a leo. Morbi vestibulum iaculis sem ac laoreet. Nullam commodo aliquam euismod. Suspendisse potenti. Duis ultrices auctor consectetur. Phasellus adipiscing erat pulvinar augue ultrices eleifend sed eget justo. Integer nulla dui, faucibus in feugiat et, elementum vitae enim. Duis nec lectus a sem malesuada tempor eu lobortis velit. Morbi nec nunc quis sapien aliquam consequat. Nulla vehicula lectus ac est mollis vitae lacinia mauris ullamcorper. Sed venenatis fringilla facilisis.
+<br>
+<br>
+kpdecker^test@gmail.com<br>
+www.incaseofstairs.com<br>
+555 555 5555<br>
+(555) 555 5555<br>
+555-555-5555<br>
++1 555 555 5555<br>
+5555555555<br>
+Nulla lacinia volutpat odio, ut ultricies neque interdum eu. Maecenas ultrices, nisi sit amet placerat lacinia, erat nunc ullamcorper sapien, ac mattis nisi nulla ut tellus. Cras feugiat blandit nulla, nec auctor dolor mollis sit amet. Curabitur in ipsum sit amet tortor aliquam bibendum. Donec et tempus justo. Nunc cursus ultricies ipsum, vel tincidunt lectus porttitor sed. Nulla vestibulum convallis mauris dapibus lobortis. Pellentesque vehicula felis eu elit aliquam a rutrum nisi elementum. Nam at sapien odio. Phasellus in lectus sit amet mauris tristique iaculis. In porttitor consequat urna, a malesuada neque sollicitudin eu. Etiam semper sapien eu est ultrices non ultrices est laoreet. Mauris dictum nunc sed ante tempus eu luctus quam lobortis. Donec ornare viverra dapibus. Duis a quam quis diam ullamcorper porta. Nunc aliquet tortor aliquet quam pharetra eget posuere tellus convallis. Praesent dictum lobortis iaculis. Phasellus egestas orci pretium mauris posuere vel adipiscing urna blandit.
+incaseofstairs.com
+</textarea>
+            <hr>
+            <label for="previewContent">Indexer Preview:</label>
+            <p id="previewContent"></p>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <a href="http://www.incaseofstairs.com/">incaseofstairs</a>
+            </div>
+            <div class="right">
+                <a href="http://github.com/kpdecker/demo">demo @ github</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.incaseofstairs.com/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="http://static.incaseofstairs.com/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../syntaxhighlight.js"></script>
+    <script type="text/javascript" src="text-indexer/text-indexer.js"></script>
+    <script type="text/javascript" src="text-indexer-demo.js"></script>
+</html>
+</body>
+</html>

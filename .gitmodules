@@ -1,0 +1,3 @@
+[submodule "indexer/text-indexer"]
+	path = indexer/text-indexer
+	url = git://github.com/kpdecker/text-indexer.git
